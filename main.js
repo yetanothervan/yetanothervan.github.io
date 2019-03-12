@@ -186,9 +186,10 @@ var CinemaService = /** @class */ (function () {
     function CinemaService(http) {
         this.http = http;
         this.API_URL = 'http://localhost:13845/api/';
+        this.API_AZURE_URL = 'http://yetanothermovies.azurewebsites.net/api/';
     }
     CinemaService.prototype.getMovies = function () {
-        return this.http.get(this.API_URL + "movies");
+        return this.http.get(this.API_AZURE_URL + "movies");
     };
     CinemaService.prototype.getMoviesLocal = function () {
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])([
@@ -268,7 +269,7 @@ var MoviesComponent = /** @class */ (function () {
     }
     MoviesComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.server.getMoviesLocal().subscribe(function (res) {
+        this.server.getMovies().subscribe(function (res) {
             _this.movies = res;
         });
     };
