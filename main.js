@@ -186,7 +186,7 @@ var CinemaService = /** @class */ (function () {
     function CinemaService(http) {
         this.http = http;
         this.API_URL = 'http://localhost:13845/api/';
-        this.API_AZURE_URL = 'http://yetanothermovies.azurewebsites.net/api/';
+        this.API_AZURE_URL = 'https://yetanothermovies.azurewebsites.net/api/';
     }
     CinemaService.prototype.getMovies = function () {
         return this.http.get(this.API_AZURE_URL + "movies");
