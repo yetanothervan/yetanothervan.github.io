@@ -247,19 +247,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _state_main_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ../../state/main.actions */
-    "./src/app/main/state/main.actions.ts");
-    /* harmony import */
-
-
-    var _state_main_reducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _state_main_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! ../../state/main.reducer */
     "./src/app/main/state/main.reducer.ts");
     /* harmony import */
 
 
-    var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! rxjs/operators */
     "./node_modules/rxjs/_esm2015/operators/index.js");
 
@@ -283,13 +277,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             takeWhile(() => this.componentIsActive))
               .subscribe((days: RationDay[]) => this.days = days);
           */
-          this.days$ = this.store.pipe(Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_2__["select"])(_state_main_reducer__WEBPACK_IMPORTED_MODULE_4__["getDays"]));
-          this.store.pipe(Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_2__["select"])(_state_main_reducer__WEBPACK_IMPORTED_MODULE_4__["getSelectedDayId"]), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["takeWhile"])(function () {
+          this.days$ = this.store.pipe(Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_2__["select"])(_state_main_reducer__WEBPACK_IMPORTED_MODULE_3__["getDays"]));
+          this.store.pipe(Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_2__["select"])(_state_main_reducer__WEBPACK_IMPORTED_MODULE_3__["getSelectedDayId"]), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["takeWhile"])(function () {
             return _this2.componentIsActive;
           })).subscribe(function (day) {
             return _this2.dayId = day;
-          });
-          this.store.dispatch(new _state_main_actions__WEBPACK_IMPORTED_MODULE_3__["Load"]());
+          }); // this.store.dispatch(new daysActions.Load());
         }
       }, {
         key: "ngOnDestroy",

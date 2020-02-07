@@ -89,7 +89,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<h1 class=\"display-4 my-3\">The Regime begins</h1>\n<nav class=\"navbar navbar-light navbar-expand-md mb-3\" style=\"background-color: #e3f2fd;\">\n    <a class=\"navbar-brand\">Regime</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarText\"\n        aria-controls=\"navbarText\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarText\">\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item\">\n                <a href=\"\" class=\"nav-link\" [routerLink]=\"['/home/main']\" routerLinkActive=\"active\">Main <span\n                        class=\"sr-only\">(current)</span></a>\n            </li>\n            <li class=\"nav-item\">\n                <a href=\"\" class=\"nav-link\" [routerLink]=\"['/home/dishes']\" routerLinkActive=\"active\">Dishes</a>\n            </li>\n            <li class=\"nav-item\">\n                <a href=\"\" class=\"nav-link\" [routerLink]=\"['/home/ingredients']\"\n                    routerLinkActive=\"active\">Ingredients</a>\n            </li>\n        </ul>\n        <span class=\"navbar-text\">\n            Choose your destiny\n        </span>\n    </div>\n</nav>\n\n\n<router-outlet></router-outlet>";
+    __webpack_exports__["default"] = "<h1 class=\"display-4 my-3\">The Regime begins</h1>\n<nav class=\"navbar navbar-light navbar-expand-md mb-3\" style=\"background-color: #e3f2fd;\">\n    <a class=\"navbar-brand\">Regime</a>\n    <button class=\"navbar-toggler\" type=\"button\" (click)=\"isCollapsed = !isCollapsed\" \n    [attr.aria-expanded]=\"!isCollapsed\" data-toggle=\"collapse\" data-target=\"#navbarText\"\n        aria-controls=\"navbarText\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarText\" [ngbCollapse]=\"isCollapsed\">\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item\">\n                <a href=\"\" class=\"nav-link\" [routerLink]=\"['/home/main']\" routerLinkActive=\"active\">Main <span\n                        class=\"sr-only\">(current)</span></a>\n            </li>\n            <li class=\"nav-item\">\n                <a href=\"\" class=\"nav-link\" [routerLink]=\"['/home/dishes']\" routerLinkActive=\"active\">Dishes</a>\n            </li>\n            <li class=\"nav-item\">\n                <a href=\"\" class=\"nav-link\" [routerLink]=\"['/home/ingredients']\"\n                    routerLinkActive=\"active\">Ingredients</a>\n            </li>\n        </ul>\n        <span class=\"navbar-text\">\n            Choose your destiny\n        </span>\n    </div>\n</nav>\n\n\n<router-outlet></router-outlet>";
     /***/
   },
 
@@ -709,9 +709,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         path: 'main',
         loadChildren: function loadChildren() {
-          return Promise.all(
+          return __webpack_require__.e(
           /*! import() | main-main-module */
-          [__webpack_require__.e("default~dishes-dish-module~ingredients-ingredients-module~main-main-module"), __webpack_require__.e("main-main-module")]).then(__webpack_require__.bind(null,
+          "main-main-module").then(__webpack_require__.bind(null,
           /*! ./main/main.module */
           "./src/app/main/main.module.ts")).then(function (m) {
             return m.MainModule;
@@ -722,7 +722,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | dishes-dish-module */
-          [__webpack_require__.e("default~dishes-dish-module~ingredients-ingredients-module~main-main-module"), __webpack_require__.e("default~dishes-dish-module~ingredients-ingredients-module"), __webpack_require__.e("dishes-dish-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~dishes-dish-module~ingredients-ingredients-module"), __webpack_require__.e("dishes-dish-module")]).then(__webpack_require__.bind(null,
           /*! ./dishes/dish.module */
           "./src/app/dishes/dish.module.ts")).then(function (m) {
             return m.DishModule;
@@ -733,7 +733,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | ingredients-ingredients-module */
-          [__webpack_require__.e("default~dishes-dish-module~ingredients-ingredients-module~main-main-module"), __webpack_require__.e("default~dishes-dish-module~ingredients-ingredients-module"), __webpack_require__.e("ingredients-ingredients-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~dishes-dish-module~ingredients-ingredients-module"), __webpack_require__.e("ingredients-ingredients-module")]).then(__webpack_require__.bind(null,
           /*! ./ingredients/ingredients.module */
           "./src/app/ingredients/ingredients.module.ts")).then(function (m) {
             return m.IngredientsModule;
@@ -805,49 +805,55 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @ng-bootstrap/ng-bootstrap */
+    "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+    /* harmony import */
+
+
+    var _app_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ./app-routing.module */
     "./src/app/app-routing.module.ts");
     /* harmony import */
 
 
-    var _shell_root_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var _shell_root_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! ./shell/root.component */
     "./src/app/shell/root.component.ts");
     /* harmony import */
 
 
-    var _shell_shell_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    var _shell_shell_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! ./shell/shell.component */
     "./src/app/shell/shell.component.ts");
     /* harmony import */
 
 
-    var _ngrx_effects__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    var _ngrx_effects__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! @ngrx/effects */
     "./node_modules/@ngrx/effects/fesm2015/effects.js");
     /* harmony import */
 
 
-    var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! @angular/platform-browser/animations */
     "./node_modules/@angular/platform-browser/fesm2015/animations.js");
     /* harmony import */
 
 
-    var _shared_shared_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    var _shared_shared_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! ./shared/shared.module */
     "./src/app/shared/shared.module.ts");
     /* harmony import */
 
 
-    var _root_store_root_store_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    var _root_store_root_store_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
     /*! ./root-store/root-store.module */
     "./src/app/root-store/root-store.module.ts");
     /* harmony import */
 
 
-    var _fakeback_fakeback_service_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    var _fakeback_fakeback_service_module__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
     /*! ./fakeback/fakeback.service-module */
     "./src/app/fakeback/fakeback.service-module.ts");
 
@@ -856,12 +862,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     };
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-      declarations: [_shell_root_component__WEBPACK_IMPORTED_MODULE_6__["RootComponent"], _shell_shell_component__WEBPACK_IMPORTED_MODULE_7__["ShellComponent"]],
-      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"], _ngrx_store__WEBPACK_IMPORTED_MODULE_3__["StoreModule"].forRoot({}), _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_4__["StoreDevtoolsModule"].instrument({
+      declarations: [_shell_root_component__WEBPACK_IMPORTED_MODULE_7__["RootComponent"], _shell_shell_component__WEBPACK_IMPORTED_MODULE_8__["ShellComponent"]],
+      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"], _ngrx_store__WEBPACK_IMPORTED_MODULE_3__["StoreModule"].forRoot({}), _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_4__["StoreDevtoolsModule"].instrument({
         name: 'Regime'
-      }), _ngrx_effects__WEBPACK_IMPORTED_MODULE_8__["EffectsModule"].forRoot([]), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_9__["NoopAnimationsModule"], _fakeback_fakeback_service_module__WEBPACK_IMPORTED_MODULE_12__["FakebackServiceModule"], _shared_shared_module__WEBPACK_IMPORTED_MODULE_10__["SharedModule"].forRoot(), _root_store_root_store_module__WEBPACK_IMPORTED_MODULE_11__["RootStoreModule"]],
+      }), _ngrx_effects__WEBPACK_IMPORTED_MODULE_9__["EffectsModule"].forRoot([]), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__["NoopAnimationsModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbCollapseModule"], _fakeback_fakeback_service_module__WEBPACK_IMPORTED_MODULE_13__["FakebackServiceModule"], _shared_shared_module__WEBPACK_IMPORTED_MODULE_11__["SharedModule"].forRoot(), _root_store_root_store_module__WEBPACK_IMPORTED_MODULE_12__["RootStoreModule"]],
       providers: [],
-      bootstrap: [_shell_root_component__WEBPACK_IMPORTED_MODULE_6__["RootComponent"]]
+      bootstrap: [_shell_root_component__WEBPACK_IMPORTED_MODULE_7__["RootComponent"]]
     })], AppModule);
     /***/
   },

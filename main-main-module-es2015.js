@@ -130,10 +130,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm2015/store.js");
-/* harmony import */ var _state_main_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../state/main.actions */ "./src/app/main/state/main.actions.ts");
-/* harmony import */ var _state_main_reducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../state/main.reducer */ "./src/app/main/state/main.reducer.ts");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-
+/* harmony import */ var _state_main_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../state/main.reducer */ "./src/app/main/state/main.reducer.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 
 
 
@@ -150,10 +148,10 @@ let MainShellComponent = class MainShellComponent {
           takeWhile(() => this.componentIsActive))
             .subscribe((days: RationDay[]) => this.days = days);
         */
-        this.days$ = this.store.pipe(Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_2__["select"])(_state_main_reducer__WEBPACK_IMPORTED_MODULE_4__["getDays"]));
-        this.store.pipe(Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_2__["select"])(_state_main_reducer__WEBPACK_IMPORTED_MODULE_4__["getSelectedDayId"]), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["takeWhile"])(() => this.componentIsActive))
+        this.days$ = this.store.pipe(Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_2__["select"])(_state_main_reducer__WEBPACK_IMPORTED_MODULE_3__["getDays"]));
+        this.store.pipe(Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_2__["select"])(_state_main_reducer__WEBPACK_IMPORTED_MODULE_3__["getSelectedDayId"]), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["takeWhile"])(() => this.componentIsActive))
             .subscribe((day) => this.dayId = day);
-        this.store.dispatch(new _state_main_actions__WEBPACK_IMPORTED_MODULE_3__["Load"]());
+        // this.store.dispatch(new daysActions.Load());
     }
     ngOnDestroy() {
         this.componentIsActive = false;

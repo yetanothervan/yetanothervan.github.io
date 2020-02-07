@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"default~dishes-dish-module~ingredients-ingredients-module~main-main-module":"default~dishes-dish-module~ingredients-ingredients-module~main-main-module","default~dishes-dish-module~ingredients-ingredients-module":"default~dishes-dish-module~ingredients-ingredients-module","dishes-dish-module":"dishes-dish-module","ingredients-ingredients-module":"ingredients-ingredients-module","main-main-module":"main-main-module"}[chunkId]||chunkId) + "-es2015.js"
+/******/ 		return __webpack_require__.p + "" + ({"default~dishes-dish-module~ingredients-ingredients-module":"default~dishes-dish-module~ingredients-ingredients-module","dishes-dish-module":"dishes-dish-module","ingredients-ingredients-module":"ingredients-ingredients-module","main-main-module":"main-main-module"}[chunkId]||chunkId) + "-es2015.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
